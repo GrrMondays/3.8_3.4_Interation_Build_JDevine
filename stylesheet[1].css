@@ -1,0 +1,187 @@
+body {
+	width:100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  margin-left: 3%;
+	margin-top:3%;
+  
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  box-shadow: 0 8px 8px 4px rgba(0,0,0,0.2);
+  border: 2px solid black;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+}
+
+.flip-card-front {
+  background-color: #bbb;
+}
+
+.flip-card-back {
+  background-color: #DE553A;
+  transform: rotateY(180deg);
+    border: 1px solid black;
+	overflow-y: auto;
+  
+}
+
+.flip-card-back h1{
+text-decoration: underline;
+	font-size: 22px;
+	
+  
+}
+
+.flip-card-back p{
+}
+.banner {
+	background-color: pink;
+	position: absolute;
+	background-size: cover;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index:-999;
+}
+
+.login_text{
+	margin: 10% 10% 10% 15%;
+}
+
+.signup_text{
+	margin: 10% 10% 10% 15%;
+
+}
+
+
+h2 {
+	font-size: 110px;
+}
+
+h3 {
+	font-size: 20px;
+	opacity: 0.2;
+	bottom: -2%;
+	position: absolute;
+	margin-left: 32%
+}
+.content {
+	width: 400px;
+	height: 200px;
+	border: 2px solid black;
+	margin-left: 10%;
+	margin-top: -10%
+}
+
+
+.profilecontent {
+	width: auto;
+	height: auto;
+	margin-left: 11%;
+	margin-top: -3.5%;
+}
+.title{
+	margin-left: 13%;
+	margin-top: 100px;
+	z-index: 6;
+}
+
+.section1 {
+	width: 400px;
+	height: 190px;
+	border: 2px solid black;
+	margin-top: 1.5%;
+}
+
+.btn_logout {
+	width: 404px;
+	height: 50px;
+	border: 2px solid black;
+	margin-top: 1%;
+}
+.section2 {
+	width: 400px;
+	height: 125px;
+	border: 2px solid black;
+	margin-top: 1.5%;
+}
+
+.section3 {
+	width: 400px;
+	height: 255px;
+	border: 2px solid black;
+	margin-top: 1.5%;
+	overflow: auto;
+}
+
+.contacttitle{
+	margin-left: 8%;
+	margin-top: 0px;
+	z-index: 6;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.8);
+  overflow-x: hidden;
+  transition: 0.8s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 50px;
+  display: block;
+  transition: 0.5s;
+}
+
+.overlay a:hover, .overlay a:focus {
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+}
