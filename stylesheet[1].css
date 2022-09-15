@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 
+/* This the css for the body in genreal */
 body {
 	width:100%;
 	height: 100%;
@@ -9,14 +10,40 @@ body {
 	overflow-y: hidden;
 }
 
+/* this is for the music papge text*/
+.totaltime {
+	font-size: 30px;
+	font-family: 'Chewy', cursive;
+	text-align: center;
+	color: #DE553A;
+	
+}
+
+.musicswitch{
+	color: #DE553A;
+	text-shadow: 1px 1px black;
+	font-size: 20px;
+	font-family: 'Chewy', cursive;
+	text-align: center;
+}
+.musictitle{
+	color: #DE553A;
+	text-shadow: 2.5px 2.5px black;
+	font-size: 40px;
+	font-family: 'Chewy', cursive;
+	text-align: center;
+	
+}
+
+/*This is the code for the flip card on the music.php*/
 .flip-card {
-  background-color: transparent;
-  width: 200px;
-  height: 200px;
-  perspective: 1000px;
-  margin-left: 3%;
-	margin-top:3%;
-  
+	background-color: transparent;
+	width: 200px;
+	height: 200px;
+	perspective: 1000px;
+	margin-left: 4%;
+	margin-top:60px;
+	float: left;
 }
 
 .flip-card-inner {
@@ -28,6 +55,7 @@ body {
   transform-style: preserve-3d;
   box-shadow: 0 8px 8px 4px rgba(0,0,0,0.2);
   border: 2px solid black;
+	
 }
 
 .flip-card:hover .flip-card-inner {
@@ -70,8 +98,11 @@ text-decoration: underline;
 .flip-card-back p{
 font-family: 'Luckiest Guy', cursive;
 }
+
+/* This is the banner for index.php*/
 .banner {
-	background-color: pink;
+	background-image: URL('images/banner1.jpg');
+	background-repeat: no-repeat;
 	position: absolute;
 	background-size: cover;
 	top: 0;
@@ -81,19 +112,21 @@ font-family: 'Luckiest Guy', cursive;
 	z-index:-999;
 }
 
+/*The css for the login heading on login.php*/
 .login_text{
 	margin: 10% 10% 10% 15%;
 	color: #DE553A;
 	text-shadow: 5px 5px black;
 }
 
+/*The css for the signup heading on signup.php*/
 .signup_text{
 	margin: 10% 10% 10% 15%;
 	color: #DE553A;
 	text-shadow: 5px 5px black;
 }
 
-
+/*The css for h3 and h2 for the general use throughout the website*/
 h2 {
 	font-family: 'Chewy', cursive;
 	font-size: 110px;
@@ -107,6 +140,8 @@ h3 {
 	position: absolute;
 	margin-left: 32%
 }
+
+/* code for the content*/
 .content {
 	width: 400px;
 	height: 200px;
@@ -116,6 +151,7 @@ h3 {
 	margin-top: -10%
 }
 
+/* logout button css*/
 .logout_btn {
 	width: 70px;
 	height: 40px;
@@ -126,6 +162,8 @@ h3 {
 	margin-top: 2.5%;
 	border: 1px solid black;
 }
+
+/* content for the profile page*/
 .profilecontent {
 	width: auto;
 	height: auto;
@@ -140,6 +178,7 @@ h3 {
 	z-index: 6;
 }
 
+/* This is for the first section for the profile page*/
 .section1 {
 	background-color: #DE553A;
 	width: 400px;
@@ -148,6 +187,7 @@ h3 {
 	margin-top: 1.5%;
 }
 
+/* log out button on the profile page*/
 .btn_logout {
 	width: 404px;
 	height: 50px;
@@ -155,6 +195,7 @@ h3 {
 	margin-top: 1%;
 	background-color: #DE553A;
 }
+/* sections for profile page*/
 .section2 {
 	background-color: #DE553A;
 	width: 400px;
@@ -172,6 +213,7 @@ h3 {
 	overflow: auto;
 }
 
+/* customizing the inoput area and labels of forms on profile*/
 .section1 input[type=text], .section2 input[type=text] {
 	margin-left: 12px;
 	border-radius: 8px;
@@ -187,6 +229,7 @@ h3 {
 	text-shadow: 2px 2px black;
 }
 
+/* IDs for password and username heading on show user */
 #UserTitle, #PasswordTitle{
 	background-color: #DF7661;
 }
@@ -209,6 +252,8 @@ h3 {
 .PasswordDisplay {
 	float: right;
 }
+
+/* title for contact page*/
 .contacttitle{
 	margin-left: 8%;
 	margin-top: 0px;
@@ -217,6 +262,7 @@ h3 {
 	z-index: 6;
 }
 
+/* Burger menu code*/
 .overlay {
   height: 100%;
   width: 0;
@@ -259,6 +305,18 @@ h3 {
   font-size: 60px;
 }
 
+/* code spefically when the screen is smaller*/
+@media screen and (max-height: 678px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+  
+}
+
+/* Code for the search bar on the index page*/
 .search {
   width: 100%;
   position: relative;
@@ -277,6 +335,7 @@ h3 {
   color: black;
 }
 
+/* lbal code for forms in general across the websute*/
 label{
 	padding: 12px 12px 4px 12px;
 	display: inline-block;
@@ -302,6 +361,7 @@ textarea{
 	width: 350px;
 }
 
+
 input[type=password]{
 	margin-left: 12px;
 	border-radius: 8px;
@@ -320,6 +380,8 @@ input[type=submit] {
 	cursor: pointer;
 	float: left;
 } 
+
+/* search bar code again*/
 .searchTerm:focus{
   color: black;
 }
@@ -351,9 +413,9 @@ p  a{
 	margin-left: 165px;
 }
 
-
+/* background image for profile/contact/login/signup */
 .rightbackground{
-    background-color: red;;
+    background-image: url('images/loginart2.jpg');
 	border: solid 1px black;
 	position: absolute;
 	width:50%;
@@ -370,6 +432,132 @@ p  a{
 	margin-left: 11%;
 	position: absolute;
 	top: 34%;
+}
+/* when screen size is 1070px*/
+@media screen and (max-width: 1070px) {
+.profilebackground{
+    background: linear-gradient(180deg, white 50%, #DE553A 50%);
+}
+
+.rightbackground{
+    background-image: url('images/loginart2.jpg');
+	border: solid 1px black;
+	position: absolute;
+	width:100%;
+	height: 50%;
+	transform: scaleX(-1);
+	background-size: cover;
+	top: 50%;
+	right: 0;
+	bottom: 0;
+	z-index:-999;
+}
+
+.content {
+	width: 400px;
+	height: 200px;
+	background-color: #DE553A;
+	border: 2px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -10%
+}
+
+.login_text{
+	margin: 10% 10% 10% 37%;
+	color: #DE553A;
+	text-shadow: 5px 5px black;
+}
+}
+
+/* when the screen size is 670px*/
+@media screen and (max-width: 670px) {
+  .overlay .closebtn {
+  top: 15px;
+  right: 35px;
+  }
+  
+.title{
+	margin-left: 6%;
+	margin-top: 10%;
+	color: #DE553A;
+	text-shadow: 5px 5px black;
+	z-index: 6;
+	text-align: center;
+}
+
+h3 {
+	bottom: -2%;
+	position: absolute;
+	margin-left: 4%
+}
+
+.wrap{
+  width: 80%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.login_text{
+	margin-left: 6%;
+	margin-top: 10%;
+	color: #DE553A;
+	text-shadow: 5px 5px black;
+	z-index: 6;
+	text-align: center;
+}
+}
+
+/* Code below this is used when the browser width is 594px or smaller*/
+@media screen and (max-width: 594px) {
+  .overlay .closebtn {
+  top: 15px;
+  right: 35px;
+  }
+ 
+ .contacttitle{
+	margin-left: 5%;
+}
+
+.title{
+	margin-left: 6%;
+	margin-top: 10%;
+	color: #DE553A;
+	text-shadow: 5px 5px black;
+	z-index: 6;
+	text-align: center;
+}
+
+h3 {
+	bottom: -2%;
+	position: absolute;
+	margin-left: 4%
+}
+
+.wrap{
+  width: 80%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.login_text{
+	margin-left: 6%;
+	margin-top: 10%;
+	color: #DE553A;
+	text-shadow: 5px 5px black;
+	z-index: 6;
+	text-align: center;
+}
+
+.content {
+	margin-top:-15%
+}
 }
 
 .profile_img{
