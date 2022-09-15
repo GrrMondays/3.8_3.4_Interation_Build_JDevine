@@ -12,8 +12,8 @@
 		<link rel="stylesheet" href="stylesheet.css"/>
 	</head>
 	<body>
+		<div class="leftbackground"></div>
 		<div class="rightbackground"></div>
-	
 		<div id="myNav" class="overlay">
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span style="color: #ff244f;">&times;</span></a>
 		  <div class="overlay-content">
@@ -23,10 +23,33 @@
 		  </div>
 		</div>
 		<span style="font-size: 60px;cursor:pointer" onclick="openNav()">&#9776;</span>
-		<div class="login_text"><h2> Heading </h2></div>
+		<div class="login_text"><h2> Sign Up </h2></div>
 		<div class="content"> 
+				<form method="post" name="Form">
+					<div class ="row">
+						<div class= "column">
+							<label for="add_username"> Username </label>
+						</div>
+						<div class="column2">
+							<input type="text" id="add_username" name="add_username" placeholder="Username...">
+						</div>
+					</div>
+					<div class ="row">
+						<div class= "column">
+							<label for="add_password"> Password </label>
+						</div>
+						<div class="column2">
+							<input type="password" id="add_password" name="add_password" placeholder="Password...">
+						</div>
+					</div>
+					
+					<div class="row">
+						<input type="submit" value="Sign Up!">
+					</div>
+					<p><a href="login.php">Want To Login?</a>
+				</form>
 		</div>
-		<h3> Footer </h3>
+		<h3> Johnathan Devine, &copy; Copyright 2022, all rights reserved </h3>
 		<script src="main.js"></script>
 	</body>
 </html>

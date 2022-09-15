@@ -31,8 +31,8 @@
 				</button>
 			</div>
 		</div>
-		<h2 class="title"> Heading </h2>
-		<h3> Footer </h3>
+		<h2 class="title"> Among <span style="color: #CC0000">M</span>us<span style="color: #CC0000">ic</span></h2>
+		<h3> Johnathan Devine, &copy; Copyright 2022, all rights reserved </h3>
 		<script src="main.js"></script>
 	</body>
 </html>
