@@ -29,6 +29,7 @@
 					<div class="flip-card">
 					  <div class="flip-card-inner">
 						<div class="flip-card-front">
+					
 						</div>
 						<div class="flip-card-back">
 						  <h1>placeholder</h1> 
@@ -38,7 +39,8 @@
 						</div>
 					  </div>
 					</div>
-		<h3> Johnathan Devine, &copy; Copyright 2022, all rights reserved </h3>
+		
+		<h3> Footer </h3>
 		<script src="main.js"></script>
 	</body>
 </html>
