@@ -12,7 +12,10 @@
 		<link rel="stylesheet" href="stylesheet.css"/>
 	</head>
 	<body>
+		<div class="leftbackground"></div>
 		<div class="rightbackground"></div>
+		<button class="btn" onclick="window.location.href='profile.php';"> <img src="images/profile.png" class="profile_img"/></button>
+		
 		<div id="myNav" class="overlay">
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span style="color: #ff244f;">&times;</span></a>
 		  <div class="overlay-content">
@@ -22,20 +25,54 @@
 		  </div>
 		</div>
 		<span style="font-size: 60px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
 			<div class="profilecontent">
 				<div class="section1">
+					<form method="post" id="UpdateUser">
+					<div class ="row">
+						<div class= "column">
+							<label for="old_username"> Username </label>
+						</div>
+						<div class="column2">
+							<input type="text" id="old_username" name="old_username" placeholder="Old Username...">
+						</div>
+					</div>
+					<div class ="row">
+						<div class= "column">
+							<label for="new_username"> Password </label>
+						</div>
+						<div class="column2">
+							<input type="text" id="new_username" name="new_username" placeholder="New Username...">
+						</div>
+					</div>
 					
-					
+					<div class="row">
+						<input type="submit" value="Update!">
+					</div>
+				</form>
 				</div>
 				<div class="section2">
-					
+					<form method="post" id="DeleteUser">
+					<div class ="row">
+						<div class= "column">
+							<label for="delete_username"> Username </label>
+						</div>
+						<div class="column2">
+							<input type="text" id="delete_username" name="delete_username" placeholder="Username...">
+						</div>
+					</div>
+					<div class="row">
+						<input type="submit" value="Delete!">
+					</div>
+				</form>
 					
 				</div>
 				<div class="section3">
+					<div class="UserDisplay" id="UserTitle">USERS</div><div class="PasswordDisplay" id="PasswordTitle">Passwords</div>
+	
 				</div>
-		</div>
-		<h3> Footer </h3>
+				<button class="btn_logout" onclick="window.location.href='logout.php';"> Log Out </button>
+			</div>		
+		<h3> Johnathan Devine, &copy; Copyright 2022, all rights reserved </h3>
 		<script src="main.js"></script>
 	</body>
 </html>
