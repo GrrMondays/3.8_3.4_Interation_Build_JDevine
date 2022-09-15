@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head> <!-- For linking my css file, meta data, website title and icon-->
-		<title> Among Music | Login </title>
+		<title> Among Music | Home </title>
 		<meta charset="UTF-8">
 		<meta name="description" content="Graemme's databases that holds music data that him and his 
 		close circle of family and friends are able to login into.">
@@ -12,9 +12,7 @@
 		<link rel="stylesheet" href="stylesheet.css"/>
 	</head>
 	<body>
-		<div class="leftbackground"></div>
-		<div class="rightbackground"></div>
-		<button class="btn" onclick="window.location.href='login.php';"> </button>
+		<div class="banner"></div>
 		<div id="myNav" class="overlay">
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span style="color: #ff244f;">&times;</span></a>
 		  <div class="overlay-content">
@@ -24,12 +22,17 @@
 		  </div>
 		</div>
 		<span style="font-size: 60px;cursor:pointer" onclick="openNav()">&#9776;</span>
-		<div class="login_text"><h2> Heading </h2></div>
-		<div class="content"> 
 		
+		<div class="wrap">
+			<div class="search">
+				<input type="text" class="searchTerm" placeholder="What are you looking for?">
+				<button type="submit" class="searchButton">
+					<i class="fa fa-search"> <img src="images/search.png"/></i>
+				</button>
+			</div>
 		</div>
-		<h3> Footer </h3>
+		<h2 class="title"> Among <span style="color: #CC0000">M</span>us<span style="color: #CC0000">ic</span></h2>
+		<h3> Johnathan Devine, &copy; Copyright 2022, all rights reserved </h3>
 		<script src="main.js"></script>
 	</body>
 </html>
-
