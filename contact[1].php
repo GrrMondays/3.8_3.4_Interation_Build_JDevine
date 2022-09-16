@@ -1,5 +1,15 @@
+<?php
+	session_start();
+	if(!isset($_SESSION['Form'])){
+		header("location: login.php");
+		}
+	else{
+		$User = $_SESSION['Form'];
+	}
+?>
 <!DOCTYPE html>
 <html>
+	<!-- meta data and link to css-->
 	<head> <!-- For linking my css file, meta data, website title and icon-->
 		<title> Among Music | Contact </title>
 		<meta charset="UTF-8">
@@ -10,21 +20,40 @@
 		<meta name="author" content="Johno Devine">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="stylesheet.css"/>
+		<link rel="icon" type="image/x-icon" href="images/icon.ico">
 	</head>
 	<body>
+		<!-- background-->
 		<div class="leftbackground"></div>
 		<div class="rightbackground"></div>
+		<!-- checks if the user logged in is an admin or not-->
+		<?php
+		if(!isset($_SESSION['Form'])){
+			 ?>
+			<button class="btn" onclick="window.location.href='login.php';"> <img src="images/profile.png" class="profile_img"/></button>
+			<?php
+		}
+		elseif ($_SESSION['Form'] != 'Graeme'){
+			?>
+			<button class="logout_btn" onclick="window.location.href='logout.php';"> Log Out </button>
+			<?php
+		}
+
+		else {
+			?>
 			<button class="btn" onclick="window.location.href='profile.php';"> <img src="images/profile.png" class="profile_img"/></button>
-		<div id="myNav" class="overlay">
-		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span style="color: #ff244f;">&times;</span></a>
-		  <div class="overlay-content">
-			<a href="index.php">Home</a>
-			<a href="music.php">Music</a>
-			<a href="contact.php">Contact</a>
-		  </div>
-		</div>
+			<?php
+		}
+			 ?>
+		<!-- burger menu-->
+		<?php
+			require_once("nav.php")
+		?>
+		<?php
+				require "13CSI_Assesment_Database_pdo.php";
+		?>
+		<!-- Contact Form-->
 		
-		<span style="font-size: 60px;cursor:pointer" onclick="openNav()">&#9776;</span>
 		<h2 class='contacttitle'> Contact Us! </h2>
 		<div class="contact"> 
 				<form action="connect.php" method="post" name="Form" onsubmit="return validateForm()">
